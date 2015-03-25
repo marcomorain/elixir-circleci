@@ -1,0 +1,9 @@
+dependencies:
+  cache_directories:
+    - ~/.evm
+  pre:
+    - git clone https://github.com/robisonsantos/evm.git
+    - ./install: {pwd: evm}
+    - echo "source /home/ubuntu/.evm/scripts/evm" > ~/.bashrc
+    - yes | evm install OTP_17.4 && evm default OTP_17.4
+
